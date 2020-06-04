@@ -6,7 +6,10 @@
 <h3>Bio: <%= @artist.bio %></h3>
 <br>
 <br>
-<a href="/artists/<%= @artist.id %>/edit">Click here to edit!</a>
+<form method="POST" action="/artists/<%= @artist.id %>/edit">
+    <input type="hidden" name="_method" value="GET">
+    <input type="submit" value="Edit artist">
+</form>
 <br>
 <br>
 <form method="POST" action="/artists/<%= @artist.id %>">
